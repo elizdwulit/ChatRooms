@@ -1,0 +1,24 @@
+﻿<Window x:Class="Client.MessageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="Messages" Height="439" Width="498" Closing="Window_Closing" Closed="Window_Closed">
+    <Grid x:Name="MessagesGrid" Margin="0,0,0,4">
+        <Label x:Name="MessagesLabel" Content="Messages" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" Width="370"/>
+        <TextBox x:Name="MessagesTextBox" HorizontalAlignment="Left" Margin="25,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="444" RenderTransformOrigin="0.5,0.5" Height="289">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.246"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="MessageInputBox" Margin="27,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="335" Height="23"/>
+        <Button x:Name="SendMessageButton" Content="Send Message" HorizontalAlignment="Left" Margin="379,364,0,0" VerticalAlignment="Top" Width="86" Click="SendMessageButton_Click"/>
+    </Grid>
+</Window>
